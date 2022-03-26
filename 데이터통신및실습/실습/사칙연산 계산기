@@ -1,0 +1,103 @@
+/*
+Project : 사칙연산 계산기
+Author: Chang‐Hyeop LEE
+Date of last update: March. 27, 2022
+*/
+
+// Console.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "Console.h"
+#include <atlstr.h>
+#include <string>
+
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#endif
+
+
+// The one and only application object
+
+CWinApp theApp;
+
+using namespace std;
+
+int main()
+{
+    int nRetCode = 0;
+
+    HMODULE hModule = ::GetModuleHandle(nullptr);
+
+    if (hModule != nullptr)
+    {
+        // initialize MFC and print and error on failure
+        if (!AfxWinInit(hModule, nullptr, ::GetCommandLine(), 0))
+        {
+            // TODO: change error code to suit your needs
+            wprintf(L"Fatal Error: MFC initialization failed\n");
+            nRetCode = 1;
+        }
+        else
+        {
+         _tsetlocale(LC_ALL, _T("")); //한글 출력을 위해 있다 "" 사이 공백 있으면 안됨!
+
+         string temp;
+         int num, length;
+         double x_1, z_1, result = 0.0;
+         CString x, y, z;
+         CString str(_T("사칙연산 수식을 입력하시오:"));
+         _tprintf(_T("%s\n"), str);
+         
+         getline(cin, temp);  // \n 만나기 전까지 하나의 문자열로 입력받는다
+         CString str1(temp.c_str());  //  string 형을 CString 으로 변환
+
+         str1.Replace(_T(" "), NULL); //str1 문자열 공백 제거
+         
+         length = str1.GetLength();
+         num = str1.FindOneOf(_T("+-*/")); // str1 문자열에서 +-*/의 앞 위치를 알려준다.
+         
+         x = str1.Left(num); 
+         x_1 = _wtof(x);  //CString형을 double형으로 형변환
+         y = str1.Mid(num, 1);
+         z = str1.Right(length - num - 1);
+         z_1 = _wtof(z);  //CString형을 double형으로 형변환
+
+         if (y == '+')
+         {
+            result = x_1 + z_1;
+         }
+         else if (y == '-')
+         {
+            result = x_1 - z_1;
+         }
+         else if (y == '*')
+         {
+            result = x_1 * z_1;
+         }
+         else if (y == '/')
+         {
+            result = x_1 / z_1;
+         }
+         else
+         {
+            CString error(_T("잘못된 수식입니다."));
+            _tprintf(_T("%s\n"), error);
+         }
+
+         _tprintf(_T("%lf\n"), result);
+         
+         //_tprintf(_T("%s\n"), str1);
+         
+            // TODO: code your application's behavior here.
+        }
+    }
+    else
+    {
+        // TODO: change error code to suit your needs
+        wprintf(L"Fatal Error: GetModuleHandle failed\n");
+        nRetCode = 1;
+    }
+
+    return nRetCode;
+}
