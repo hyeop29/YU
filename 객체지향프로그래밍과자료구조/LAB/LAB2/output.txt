@@ -1,0 +1,37 @@
+AD Jan. 1, 1 is    January  1,    1 (    Monday)
+Today is    October  1, 2021 (    Friday)
+New year's day of this year was    January  1, 2021 (    Friday)
+Christmas of this year is   December 25, 2021 (  Saturday)
+ Sorry, today is not Christmas!
+ You must wait 85 day(s) to Christmas !
+
+Person p1 : 
+ Person [name: Hong, Gil-Dong  , birth date:    January  1, 2000 (  Saturday)]
+Person p2 : 
+ Person [name: Lee, Soo-Jeong  , birth date:  September  1, 2018 (  Saturday)]
+
+Generating array of persons ... 
+ Person [name: Acwxdi          , birth date:      April 26, 1913 (  Saturday)]
+ Person [name: Lyozdoadmlecxl  , birth date:    January  3, 1321 (    Friday)]
+ Person [name: Huihyfy         , birth date:     August 11, 2365 ( Wednesday)]
+ Person [name: Ygkjnck         , birth date:        May  7, 2233 (   Tuesday)]
+ Person [name: Xafdyqsbzfh     , birth date:       July 19, 2912 (   Tuesday)]
+ Person [name: Rntcxdhy        , birth date:       July  8, 1442 (    Friday)]
+ Person [name: Nxpmznqvvrpd    , birth date:   December 22, 2918 (  Thursday)]
+ Person [name: Kabizgteosan    , birth date:   December 24, 1992 (  Thursday)]
+ Person [name: Towkrmvcjubmmj  , birth date:    October  6, 1780 (    Friday)]
+ Person [name: Aocfnum         , birth date:        May 26, 2359 (   Tuesday)]
+
+
+SelectionSortbrithDate of persons ... 
+ Person [name: Lyozdoadmlecxl  , birth date:    January  3, 1321 (    Friday)]
+ Person [name: Rntcxdhy        , birth date:       July  8, 1442 (    Friday)]
+ Person [name: Towkrmvcjubmmj  , birth date:    October  6, 1780 (    Friday)]
+ Person [name: Acwxdi          , birth date:      April 26, 1913 (  Saturday)]
+ Person [name: Kabizgteosan    , birth date:   December 24, 1992 (  Thursday)]
+ Person [name: Ygkjnck         , birth date:        May  7, 2233 (   Tuesday)]
+ Person [name: Aocfnum         , birth date:        May 26, 2359 (   Tuesday)]
+ Person [name: Huihyfy         , birth date:     August 11, 2365 ( Wednesday)]
+ Person [name: Xafdyqsbzfh     , birth date:       July 19, 2912 (   Tuesday)]
+ Person [name: Nxpmznqvvrpd    , birth date:   December 22, 2918 (  Thursday)]
+
