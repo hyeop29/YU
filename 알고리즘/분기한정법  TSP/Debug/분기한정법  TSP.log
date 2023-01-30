@@ -1,0 +1,4 @@
+﻿  main.cpp
+N:\3학년\알고리즘\분기한정법  TSP\분기한정법  TSP\main.cpp(33,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+N:\3학년\알고리즘\분기한정법  TSP\분기한정법  TSP\main.cpp(48,7): warning C4101: 'check' :참조되지 않은 지역 변수입니다.
+  분기한정법  TSP.vcxproj -> N:\3학년\알고리즘\분기한정법  TSP\Debug\분기한정법  TSP.exe
