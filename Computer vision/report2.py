@@ -9,6 +9,8 @@ cv2.imshow("original_img",original) # 원영상 출력
 # cvtColor 함수 사용 변환
 ycbcr_cvtColor = cv2.cvtColor(original, cv2.COLOR_BGR2YCR_CB) # cvtColor 함수를 이용하여 BGR 색상 공간 -> YCrCb 공간
 
+cv2.imshow("YCbCr_cvtColor", ycbcr_cvtColor) # YCbCr 영상 출력
+
 Y, Cr, Cb = cv2.split(ycbcr_cvtColor) # OpenCV에서는 YCbCr의 순서가 아닌 YCrCb의 순서로 인식
 cv2.imshow("Y_cvtColor", Y) # Y 영상 출력
 
@@ -40,9 +42,10 @@ for i in range(height):
 
 out = (np.dstack((Y, Cr, Cb))).astype(np.uint8) # 합쳐진 영상을 만든다
 
-Y, Cr, Cb = cv2.split(out) # Y, Cr, Cb 구분
+cv2.imshow("YCbCr_formula", out) # YCbCr 영상 출력
 
-cv2.imshow("Y_formula", Y) # Y 영상 출력
+Y1, Cr2, Cb3 = cv2.split(out) # Y, Cr, Cb 구분
+cv2.imshow("Y_formula", Y1) # Y 영상 출력
 
 # R, G, B의 값을 구하기 위해 빈 영상을 만들어준다.
 R = np.zeros((height, width), dtype=np.float)
